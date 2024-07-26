@@ -15,6 +15,6 @@ class Order(models.Model):
     estimated_time = models.IntegerField(default=-1)
     deliver_finish = models.BooleanField(default=0)
 
-class Order_food(models.Model):
-    order = models.ForeignKey(Shop, on_delete=models.CASCADE)
+class Orderfood(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
     food_name = models.CharField(max_length=20)
